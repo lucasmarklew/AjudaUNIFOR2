@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 public class MenuPrincipal extends AppCompatActivity {
 
+
     private Button btPostagem, btMeuHistorico, btHistorico;
 
     @Override
@@ -24,8 +25,8 @@ public class MenuPrincipal extends AppCompatActivity {
         btHistorico.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuPrincipal.this, "Historico De Postagens", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(MenuPrincipal.this, ListaPostagem.class);
+                startActivity(intent);
 
             }
         });

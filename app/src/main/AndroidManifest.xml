@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MenuPrincipal" />
-        <activity android:name=".Postagem"></activity>
+        <activity android:name=".Postagem" />
+        <activity android:name=".ListaPostagem" />
     </application>
 
 </manifest>

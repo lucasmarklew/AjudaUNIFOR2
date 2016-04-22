@@ -40,6 +40,10 @@ public class Postagem extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(etTitulo.getText().toString().equals("") || etPost.getText().toString().equals("")) {
+                    mensagemExibir("Erro.:", "Campo titulo ou postagem nao podem estar vazios");
+
+                }else{
                 Log.i("Salvar", "entrou no evento");
                 String urlPost = "http://192.168.0.46/android/gravarPostagem.php";
                 String urlGet = "http://192.168.0.46/android/gravarPostagem.php?titulo=" + etTitulo.getText().toString() + "&texto=" + etPost.getText().toString();
@@ -66,6 +70,7 @@ public class Postagem extends AppCompatActivity {
                     Log.i("erro", "erro = " + erro);
                     Toast.makeText(Postagem.this, "Erro.: " + erro, Toast.LENGTH_LONG).show();
 
+                    }
                 }
             }
         });

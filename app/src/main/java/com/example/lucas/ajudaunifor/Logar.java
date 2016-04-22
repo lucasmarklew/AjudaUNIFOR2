@@ -20,11 +20,11 @@ import java.util.ArrayList;
 
 public class Logar extends AppCompatActivity {
 
-
     public void enableStrictMode(){
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
     }
+
 
     private EditText etUsuario, etSenha;
     private Button btAcessar;
@@ -48,10 +48,10 @@ public class Logar extends AppCompatActivity {
             public void onClick(View v) {
                 Log.i("logar", "entrou no evento");
                 String urlPost = "http://192.168.0.46/android/logar.php";
-                String urlGet = "http://192.168.0.46/android/logar.php?matricula=" + etUsuario.getText().toString() + "&senha=" + etSenha.getText().toString();
+                String urlGet = "http://192.168.0.46/android/logar.php?Matricula=" + etUsuario.getText().toString() + "&Senha=" + etSenha.getText().toString();
                 ArrayList<NameValuePair> parametrosPost = new ArrayList<NameValuePair>();
-                parametrosPost.add(new BasicNameValuePair("matricula",etUsuario.getText().toString()));
-                parametrosPost.add(new BasicNameValuePair("senha",etSenha.getText().toString()));
+                parametrosPost.add(new BasicNameValuePair("Matricula",etUsuario.getText().toString()));
+                parametrosPost.add(new BasicNameValuePair("Senha",etSenha.getText().toString()));
                 String respostaRetornada = null;
                 Log.i("logar", "vai entrar no try");
 
